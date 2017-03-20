@@ -1,8 +1,11 @@
 package com.hackathon.bhamashah.utilities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -18,6 +21,7 @@ import com.hackathon.bhamashah.base.BaseFragment;
  */
 
 public class AppUtils {
+    private static ProgressDialog progressDialog =null;
 
     public static void addFragment(Activity activity, BaseFragment baseFragment) {
         // Create fragment and give it an argument specifying the article it should show
@@ -67,6 +71,54 @@ public class AppUtils {
 
     public static void loadImage(ImageView imageView, String url) {
         loadImage(imageView,url,null,null);
+    }
+
+    public static void showLoader(Context context){
+        hideLoader();
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle("Loading");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+    }
+
+    public static void hideLoader(){
+        if (progressDialog!=null && progressDialog.isShowing()) {
+            progressDialog.dismiss();
+        }
+    }
+
+
+
+    public static void showDialogWithTwoButtons(Context context, String title, String message, String positiveButtonText, String NegativeButtonText, final DialogInterface.OnClickListener positiveClickListener, final DialogInterface.OnClickListener negativeClickListener){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        if(title!=null){
+            builder.setTitle(title);
+        }
+        builder.setMessage(message);
+        builder.setPositiveButton(positiveButtonText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // positive button logic
+                        if(positiveClickListener!=null){
+                            positiveClickListener.onClick(dialog,which);
+                        }
+                    }
+                });
+        builder.setNegativeButton(NegativeButtonText,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // negative button logic
+                        if(negativeClickListener!=null){
+                            negativeClickListener.onClick(dialog,which);
+                        }
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        // display dialog
+        dialog.show();
     }
 
 
