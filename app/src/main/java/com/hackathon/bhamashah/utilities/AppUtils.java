@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.hackathon.bhamashah.R;
 import com.hackathon.bhamashah.base.BaseFragment;
 import com.hackathon.bhamashah.base.MyApplication;
+import com.hackathon.bhamashah.data.local.SharedPreferences;
 
 /**
  * Created by himanshukumarsingh on 20/03/17.
@@ -109,7 +110,8 @@ public class AppUtils {
                         }
                     }
                 });
-        if(negativeButtonText!=null) {
+
+        if (negativeButtonText!=null) {
             builder.setNegativeButton(negativeButtonText,
                     new DialogInterface.OnClickListener() {
                         @Override
@@ -139,11 +141,16 @@ public class AppUtils {
         activity.runOnUiThread(runnable);
     }
 
-    public static void addAdatperToRecyclerView(RecyclerView.Adapter adapter,RecyclerView recyclerView){
+
+    public static void addAdatperToRecyclerView(RecyclerView.Adapter adapter,RecyclerView recyclerView) {
 //        mAdapter = new MoviesAdapter(movieList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MyApplication.getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
+    }
+
+    public static void logout(Context context) {
+        SharedPreferences.clearAll(context);
     }
 }

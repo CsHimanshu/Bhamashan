@@ -43,5 +43,7 @@
     <string name="error_invalid_password">This OTP is too short</string>
     <string name="error_incorrect_password">This OTP is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="normal_delivery_text">It will be delivered within 2-3 working days</string>
+    <string name="request_amt_error">Enter request amount</string>
 
 </resources>

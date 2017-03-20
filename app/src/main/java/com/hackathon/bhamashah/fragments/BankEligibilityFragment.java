@@ -124,7 +124,7 @@ public class BankEligibilityFragment extends BaseFragment {
 
                             Log.d("TEST", "run:  Rular new : " + bean.getForRural());
                             Log.d("TEST", "run:  Rular old : " + isRullar);
-                            if (bean.getGender().equalsIgnoreCase(isRullar) && bean.getForRural().equalsIgnoreCase(isRullar)) {
+                            if (bean.getGender().equalsIgnoreCase(gender) && bean.getForRural().equalsIgnoreCase(isRullar)) {
                                     filterList.add(bean);
                             }
                             }
