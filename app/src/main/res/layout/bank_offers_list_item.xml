@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="5dp"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/bankitem_layout_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bankitem_category"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="fdffd"/>
+
+        <TextView
+            android:id="@+id/bankitem_shortdesc"
+            android:textColor="@color/subtitle"
+            android:textSize="10sp"
+            android:layout_alignParentTop="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="fdffd"/>
+
+        <TextView
+            android:id="@+id/bankitem_amount"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="end"
+            android:layout_alignParentTop="true"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="fdffd"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bankitem_button_apply"
+        android:layout_below="@id/bankitem_layout_category"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:text="Apply"/>
+
+
+    <LinearLayout
+        android:id="@+id/bankitem_layout_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/bankitem_button_apply"
+        android:layout_below="@id/bankitem_layout_category">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtitle"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="Description : "/>
+        <TextView
+            android:id="@+id/bankitem_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtitle"
+            android:textSize="10sp"
+            android:text="Description : "/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bankitem_layout_enddate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/bankitem_button_apply"
+        android:layout_below="@id/bankitem_layout_des">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtitle"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="End Date : "/>
+        <TextView
+            android:id="@+id/bankitem_enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/subtitle"
+            android:textSize="10sp"
+            android:text="Description : "/>
+    </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/subtitle"/>
+
+</LinearLayout>
