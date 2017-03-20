@@ -80,6 +80,11 @@ public class SharedPreferences {
         }
     }
 
+    public static void clearAll(Context context) {
+        android.content.SharedPreferences.Editor editor = getSharedPreferences(context).edit();
+        editor.clear();
+        editor.commit();
+    }
 
     private static android.content.SharedPreferences getSharedPreferences(Context context) {
         android.content.SharedPreferences pref = context.getSharedPreferences(SharedPreferences.PREFERENCE_NAME, Context.MODE_PRIVATE);

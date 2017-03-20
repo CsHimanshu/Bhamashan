@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.hackathon.bhamashah.R;
 import com.hackathon.bhamashah.base.BaseFragment;
+import com.hackathon.bhamashah.data.local.SharedPreferences;
 
 /**
  * Created by himanshukumarsingh on 20/03/17.
@@ -89,7 +90,7 @@ public class AppUtils {
 
 
 
-    public static void showDialogWithTwoButtons(Context context, String title, String message, String positiveButtonText, String NegativeButtonText, final DialogInterface.OnClickListener positiveClickListener, final DialogInterface.OnClickListener negativeClickListener){
+    public static void showDialogWithTwoButtons(Context context, String title, String message, String positiveButtonText, String negativeButtonText, final DialogInterface.OnClickListener positiveClickListener, final DialogInterface.OnClickListener negativeClickListener){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         if(title!=null){
             builder.setTitle(title);
@@ -105,17 +106,18 @@ public class AppUtils {
                         }
                     }
                 });
-        builder.setNegativeButton(NegativeButtonText,
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // negative button logic
-                        if(negativeClickListener!=null){
-                            negativeClickListener.onClick(dialog,which);
+        if (negativeButtonText!=null) {
+            builder.setNegativeButton(negativeButtonText,
+                    new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            // negative button logic
+                            if (negativeClickListener != null) {
+                                negativeClickListener.onClick(dialog, which);
+                            }
                         }
-                    }
-                });
-
+                    });
+        }
         AlertDialog dialog = builder.create();
         // display dialog
         dialog.show();
@@ -132,5 +134,9 @@ public class AppUtils {
 
     public static void updateUI(Activity activity, Runnable runnable) {
         activity.runOnUiThread(runnable);
+    }
+
+    public static void logout(Context context) {
+        SharedPreferences.clearAll(context);
     }
 }
