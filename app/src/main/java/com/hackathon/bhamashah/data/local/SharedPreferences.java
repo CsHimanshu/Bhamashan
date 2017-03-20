@@ -2,6 +2,8 @@ package com.hackathon.bhamashah.data.local;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
+
 /**
  * Created by himanshukumarsingh on 22/02/17.
  */
@@ -10,7 +12,12 @@ public class SharedPreferences {
     //SharedPrefrence Name
     public static final String PREFERENCE_NAME = "bhamashah_local_storage";
     //  SharedPrefrence Key
-//    public static final String PRE_ACCESS_TOKEN = "bhamashah_access_token";
+    public static final String KEY_MOBILE_NUMBER = "";
+    public static final String KEY_BID = "";
+    public static final String KEY_HOD_DETAIL = "";
+    public static final String KEY_MEMBERLIST = "";
+    public static final String KEY_IsLOGIN = "";
+
 
     public static boolean getBoolean(String key, boolean defValue, Context context) {
         return getSharedPreferences(context).getBoolean(key, defValue);
@@ -52,6 +59,26 @@ public class SharedPreferences {
         editor.putString(key, value);
         editor.commit();
     }
+
+    public static void putObject(String key, Object myObject, Context context) {
+        android.content.SharedPreferences.Editor editor = getSharedPreferences(context).edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(myObject);
+        editor.putString(key, json);
+        editor.commit();
+    }
+
+    public static Object getObject(String key,Object object, Context context) {
+        Gson gson = new Gson();
+        String json = getSharedPreferences(context).getString(key, null);
+        if(json!=null){
+            return gson.fromJson(json,object.getClass());
+        }else{
+            return null;
+        }
+    }
+
+
     private static android.content.SharedPreferences getSharedPreferences(Context context) {
         android.content.SharedPreferences pref = context.getSharedPreferences(SharedPreferences.PREFERENCE_NAME, Context.MODE_PRIVATE);
         return pref;

@@ -3,6 +3,7 @@ package com.hackathon.bhamashah.utilities;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -76,5 +77,9 @@ public class AppUtils {
         } catch (Exception e) {
             throw new RuntimeException("Error getting Resource ID.", e);
         }
+    }
+
+    public static void updateUI(Activity activity, Runnable runnable) {
+        activity.runOnUiThread(runnable);
     }
 }

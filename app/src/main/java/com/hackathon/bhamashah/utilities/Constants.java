@@ -6,5 +6,6 @@ package com.hackathon.bhamashah.utilities;
 
 public class Constants {
 
-    public static final String BASE_URL="https://apitest.sewadwaar.rajasthan.gov.in/app/live/Service/hofAndMember/ForApp/";
+    public static final String BASE_URL="http://ttnstore.com/Hackathon/";
+    public static final String BFamilyID = "WDYYYGG";
 }
