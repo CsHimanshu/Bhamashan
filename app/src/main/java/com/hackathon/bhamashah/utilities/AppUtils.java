@@ -129,4 +129,8 @@ public class AppUtils {
             throw new RuntimeException("Error getting Resource ID.", e);
         }
     }
+
+    public static void updateUI(Activity activity, Runnable runnable) {
+        activity.runOnUiThread(runnable);
+    }
 }

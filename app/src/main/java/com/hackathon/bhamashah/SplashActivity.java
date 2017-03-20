@@ -6,6 +6,9 @@ import android.os.Handler;
 
 import android.os.Bundle;
 
+import com.hackathon.bhamashah.activities.LoginActivity;
+import com.hackathon.bhamashah.data.local.SharedPreferences;
+
 
 public class SplashActivity extends Activity {
 
@@ -17,8 +20,16 @@ public class SplashActivity extends Activity {
             @Override
             public void run() {
                 if (!isFinishing()){
-                Intent i=new Intent(SplashActivity.this,MainActivity.class);
-                startActivity(i);finish();
+                    if( SharedPreferences.getBoolean(SharedPreferences.KEY_IsLOGIN,false,SplashActivity.this)){
+                        Intent i=new Intent(SplashActivity.this,MainActivity.class);
+                        startActivity(i);
+
+                    }else{
+                        Intent i=new Intent(SplashActivity.this,LoginActivity.class);
+                        startActivity(i);
+                    }
+                    finish();
+
                 }
             }
         }, 2000);

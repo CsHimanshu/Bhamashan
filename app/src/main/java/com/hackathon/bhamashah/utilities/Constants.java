@@ -6,5 +6,6 @@ package com.hackathon.bhamashah.utilities;
 
 public class Constants {
 
-    public static final String BASE_URL="";
+    public static final String BASE_URL="http://ttnstore.com/Hackathon/";
+    public static final String BFamilyID = "WDYYYGG";
 }

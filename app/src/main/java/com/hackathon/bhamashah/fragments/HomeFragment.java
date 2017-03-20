@@ -19,4 +19,20 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_home,container,false);
     }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+//        Call<Test> testCall =RemoteClient.getApiInterface().getTestResponse("WDYYYGG","ad7288a4-7764-436d-a727-783a977f1fe1");
+//        testCall.enqueue(new ResponseHandler<Test>(getActivity(), 1, new SuccessInferface<Test>() {
+//            @Override
+//            public void onResponse(int id, Test test) {
+//                Log.d("TEST", "onResponse: " + test);
+//
+//            }
+//        },null));
+
+    }
 }
