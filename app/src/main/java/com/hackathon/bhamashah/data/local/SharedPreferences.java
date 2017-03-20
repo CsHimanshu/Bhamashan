@@ -69,6 +69,8 @@ public class SharedPreferences {
     }
 
     public static Object getObject(String key,Object object, Context context) {
+        if(object==null)
+            return null;
         Gson gson = new Gson();
         String json = getSharedPreferences(context).getString(key, null);
         if(json!=null){

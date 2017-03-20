@@ -78,7 +78,23 @@ public class LoginActivity extends AppCompatActivity{
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         mEmailView.setText(Constants.BFamilyID);
+//        showLoginDetails();
     }
+
+//    void showLoginDetails(){
+//        Log.d("TEST", "showLoginDetails: -- Going to call this method");
+//        HofDetailsBean hofDetailsBean = AppData.getInstance().getUser().getHoFDetails();
+//        Log.d("TEST", "showLoginDetails: -- Home Detail : " +hofDetailsBean);
+//
+//        List<FamilyDetailsBean> familyDetailsBeans = AppData.getInstance().getUser().getFamily_Details();
+//        Log.d("TEST", "showLoginDetails: -- Family Detail : " +familyDetailsBeans);
+//        if(familyDetailsBeans==null)
+//            return;
+//        for (FamilyDetailsBean familyDetailsBean : familyDetailsBeans) {
+//            Log.d("TEST", "showLoginDetails: -- " +familyDetailsBean);
+//            Log.d("TEST", "showLoginDetails: -- " +familyDetailsBean.getNAME_ENG());
+//        }
+//    }
 
 
 
