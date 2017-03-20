@@ -35,7 +35,6 @@ public class CurrentOffersBankFragment extends BaseFragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -59,6 +58,8 @@ public class CurrentOffersBankFragment extends BaseFragment {
                 AppUtils.updateUI(getActivity(), new Runnable() {
                     @Override
                     public void run() {
+                        if(currentOffersApiResponse==null)
+                            return;
                         List<PreApprovedLoansBean> list = currentOffersApiResponse.getData().getPreApprovedLoans();
                         AppUtils.addAdatperToRecyclerView(new BankOffersAdapter(getActivity(),list),recyclerView);
                     }

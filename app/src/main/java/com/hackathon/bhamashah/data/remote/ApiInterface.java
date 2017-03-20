@@ -2,6 +2,7 @@ package com.hackathon.bhamashah.data.remote;
 
 import com.hackathon.bhamashah.bean.ApplyBankServiceApiResponse;
 import com.hackathon.bhamashah.bean.CurrentOffersApiResponse;
+import com.hackathon.bhamashah.bean.LoanEligibilityApiResponse;
 import com.hackathon.bhamashah.bean.LoginAPIResponse;
 
 import retrofit2.Call;
@@ -43,5 +44,14 @@ public interface ApiInterface {
             @Query("operation") String operation,
             @Query("bhamashahId") String bhamashahId,
             @Query("serviceId") String serviceId
+    );
+
+    @Headers("Cache-Control: no-cache")
+    @GET("services.php")
+    Call<LoanEligibilityApiResponse> getLoanEligibilityApiResponse(
+            @Query("operation") String operation,
+            @Query("bhamashahId") String bhamashahId,
+            @Query("isRural") String isRural,
+            @Query("gender") String gender
     );
 }
