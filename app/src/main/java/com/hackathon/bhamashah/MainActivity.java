@@ -97,19 +97,19 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_bhamashahPassbook) {
             AppUtils.addFragment(this,new BhamashahPassbookFragment());
 
-        } else if (id == R.id.nav_loan_governmentLoan) {
+        } else if (id == R.id.nav_bs_offers) {
             AppUtils.addFragment(this,new GovernmentLoanFragment());
 
-        } else if (id == R.id.nav_loan_customLoan) {
+        } else if (id == R.id.nav_bs_eligibility) {
             AppUtils.addFragment(this,new CustomLoanFragment());
 
-        } else if (id == R.id.nav_ss_awiarness) {
+        } else if (id == R.id.nav_ss_awiarness_general) {
             AppUtils.addFragment(this,new AwairnessFragment());
 
         }  else if (id == R.id.nav_ss_homeBanking) {
             AppUtils.addFragment(this,new HomeBankingFragment());
 
-        } else if (id == R.id.nav_ss_medical) {
+        } else if (id == R.id.nav_ss_career) {
             AppUtils.addFragment(this,new SpecialMedicalServicesFragment());
         } else if (id == R.id.nav_emergency_sos) {
             //call 100

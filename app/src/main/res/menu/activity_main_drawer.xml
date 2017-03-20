@@ -3,36 +3,34 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_bhamashahPassbook"
-            android:title="@string/bhamashah_passbook" />
+            android:id="@+id/nav_ss_homeBanking"
+            android:title="@string/home_banking" />
     </group>
 
 
-        <item android:title="@string/loan">
+        <item android:title="@string/banking_offers_and_service">
             <menu>
                 <group android:checkableBehavior="single">
                     <item
-                        android:id="@+id/nav_loan_governmentLoan"
-                        android:title="@string/government_loans" />
+                        android:id="@+id/nav_bs_offers"
+                        android:title="@string/current_offers_and_scheme" />
                     <item
-                        android:id="@+id/nav_loan_customLoan"
-                        android:title="@string/custom_loan" />
+                        android:id="@+id/nav_bs_eligibility"
+                        android:title="@string/eligibility" />
                 </group>
             </menu>
         </item>
 
-        <item android:title="@string/special_services">
+        <item android:title="@string/awairness">
             <menu>
                 <group android:checkableBehavior="single">
                     <item
-                        android:id="@+id/nav_ss_awiarness"
-                        android:title="@string/awairness" />
+                        android:id="@+id/nav_ss_awiarness_general"
+                        android:title="@string/general" />
+
                     <item
-                        android:id="@+id/nav_ss_homeBanking"
-                        android:title="@string/home_banking" />
-                    <item
-                        android:id="@+id/nav_ss_medical"
-                        android:title="@string/medical_for_girls" />
+                        android:id="@+id/nav_ss_career"
+                        android:title="@string/career_and_others" />
                 </group>
             </menu>
         </item>
@@ -52,15 +50,17 @@
 
 
     <item android:title="@string/other">
+
         <menu>
             <group android:checkableBehavior="single">
                 <item
+                    android:id="@+id/nav_bhamashahPassbook"
+                    android:title="@string/bhamashah_passbook" />
+                <item
                     android:id="@+id/nav_logout"
-                    android:icon="@drawable/ic_menu_manage"
                     android:title="@string/logout" />
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
                 android:title="@string/share" />
             </group>
         </menu>

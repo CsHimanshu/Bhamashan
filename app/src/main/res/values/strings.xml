@@ -16,10 +16,15 @@
     <string name="emergency">Emergency</string>
     <string name="special_services">Special Services</string>
     <string name="loan">Loan</string>
-    <string name="other">Other</string>
+    <string name="other">Others</string>
     <string name="logout">Logout</string>
     <string name="share">Share</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="banking_offers_and_service">Banking offers and Service</string>
+    <string name="current_offers_and_scheme">Current offers and scheme</string>
+    <string name="eligibility">Eligibility</string>
+    <string name="career_and_others">Career and others</string>
+    <string name="general">General</string>
 </resources>
