@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity
             AppUtils.addFragment(this,new BhamashahPassbookFragment());
 
         } else if (id == R.id.nav_bs_offers) {
+            setTitle("Offer");
             AppUtils.addFragment(this,new CurrentOffersBankFragment());
 
         } else if (id == R.id.nav_bs_eligibility) {

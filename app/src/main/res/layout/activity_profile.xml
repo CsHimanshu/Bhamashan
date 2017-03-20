@@ -32,6 +32,36 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearServices"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/title"
+                android:textStyle="bold"
+                android:text="Select Services" />
+            <Spinner
+                android:id="@+id/profile_spinner_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+        </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/profile_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:scrollbars="vertical" />
+        </LinearLayout>
 
 
     <LinearLayout

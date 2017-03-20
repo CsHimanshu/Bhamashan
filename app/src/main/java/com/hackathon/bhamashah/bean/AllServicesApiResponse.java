@@ -8,7 +8,6 @@ import java.util.List;
  */
 
 public class AllServicesApiResponse {
-
     /**
      * statusCode : 200
      * statusMessage : Services Fetched
