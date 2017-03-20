@@ -3,39 +3,65 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_bhamashahPassbook"
+            android:title="@string/bhamashah_passbook" />
     </group>
 
-    <item android:title="Communicate">
+
+        <item android:title="@string/loan">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_loan_governmentLoan"
+                        android:title="@string/government_loans" />
+                    <item
+                        android:id="@+id/nav_loan_customLoan"
+                        android:title="@string/custom_loan" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/special_services">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_ss_awiarness"
+                        android:title="@string/awairness" />
+                    <item
+                        android:id="@+id/nav_ss_homeBanking"
+                        android:title="@string/home_banking" />
+                    <item
+                        android:id="@+id/nav_ss_medical"
+                        android:title="@string/medical_for_girls" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/emergency">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_emergency_sos"
+                        android:title="@string/sos" />
+                    <item
+                        android:id="@+id/nav_emergency_medical"
+                        android:title="@string/medical" />
+                </group>
+            </menu>
+        </item>
+
+
+    <item android:title="@string/other">
         <menu>
             <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="@string/logout" />
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send"
-                />
-                <item
-                    android:id="@+id/nav_sends"
-                    android:title=""
-                    />
+                android:title="@string/share" />
             </group>
         </menu>
     </item>

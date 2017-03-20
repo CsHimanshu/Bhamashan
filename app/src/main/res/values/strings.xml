@@ -5,4 +5,18 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="bhamashah_passbook">Bhamashah Passbook</string>
+    <string name="government_loans">Government Loans</string>
+    <string name="custom_loan">Custom Loan</string>
+    <string name="awairness">Awairness</string>
+    <string name="home_banking">Home Banking</string>
+    <string name="medical_for_girls">Medical for Girls</string>
+    <string name="sos">SOS</string>
+    <string name="medical">Medical</string>
+    <string name="emergency">Emergency</string>
+    <string name="special_services">Special Services</string>
+    <string name="loan">Loan</string>
+    <string name="other">Other</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
 </resources>
