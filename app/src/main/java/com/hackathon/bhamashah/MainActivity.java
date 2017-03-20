@@ -13,8 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hackathon.bhamashah.fragments.AwairnessFragment;
+import com.hackathon.bhamashah.fragments.BhamashahPassbookFragment;
+import com.hackathon.bhamashah.fragments.CustomLoanFragment;
+import com.hackathon.bhamashah.fragments.GovernmentLoanFragment;
+import com.hackathon.bhamashah.fragments.HomeBankingFragment;
 import com.hackathon.bhamashah.fragments.HomeFragment;
 import com.hackathon.bhamashah.fragments.OtherFragment;
+import com.hackathon.bhamashah.fragments.SpecialMedicalServicesFragment;
 import com.hackathon.bhamashah.utilities.AppUtils;
 
 public class MainActivity extends AppCompatActivity
@@ -84,21 +90,36 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-       /* if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_bhamashahPassbook) {
+            AppUtils.addFragment(this,new BhamashahPassbookFragment());
 
-        } else if (id == R.id.nav_slideshow) {
-            AppUtils.addFragment(this,new HomeFragment());
+        } else if (id == R.id.nav_loan_governmentLoan) {
+            AppUtils.addFragment(this,new GovernmentLoanFragment());
 
-        } else if (id == R.id.nav_manage) {
-            AppUtils.addFragment(this,new OtherFragment());
+        } else if (id == R.id.nav_loan_customLoan) {
+            AppUtils.addFragment(this,new CustomLoanFragment());
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_ss_awiarness) {
+            AppUtils.addFragment(this,new AwairnessFragment());
 
-        } else if (id == R.id.nav_send) {
+        }  else if (id == R.id.nav_ss_homeBanking) {
+            AppUtils.addFragment(this,new HomeBankingFragment());
 
-        }*/
+        } else if (id == R.id.nav_ss_medical) {
+            AppUtils.addFragment(this,new SpecialMedicalServicesFragment());
+        } else if (id == R.id.nav_emergency_sos) {
+            //call 100
+
+        } else if (id == R.id.nav_emergency_medical) {
+            //call 108 or 1052
+
+        }else if (id == R.id.nav_logout) {
+            //logout
+
+        }else if (id == R.id.nav_share) {
+            //share
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
