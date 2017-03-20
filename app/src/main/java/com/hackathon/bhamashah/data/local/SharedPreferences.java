@@ -10,7 +10,7 @@ public class SharedPreferences {
     //SharedPrefrence Name
     public static final String PREFERENCE_NAME = "bhamashah_local_storage";
     //  SharedPrefrence Key
-    public static final String PRE_ACCESS_TOKEN = "bhamashah_access_token";
+//    public static final String PRE_ACCESS_TOKEN = "bhamashah_access_token";
 
     public static boolean getBoolean(String key, boolean defValue, Context context) {
         return getSharedPreferences(context).getBoolean(key, defValue);
