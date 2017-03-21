@@ -16,4 +16,32 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/linearlayout_homeactivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_homeactivity_homebanking"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Home Banking"/>
+        <Button
+            android:id="@+id/button_homeactivity_bankingservices"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Banking Services"/>
+
+        <Button
+            android:id="@+id/button_homeactivity_awairness"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Awairness"/>
+        <Button
+            android:id="@+id/button_homeactivity_other"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Bhamashah Passbook"/>
+
+    </LinearLayout>
 </RelativeLayout>

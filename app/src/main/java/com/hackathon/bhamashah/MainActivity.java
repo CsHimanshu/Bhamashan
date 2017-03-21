@@ -17,7 +17,9 @@ import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hackathon.bhamashah.activities.LoginActivity;
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     private ImageView headerImageViewProfile;
     private TextView headerTextviewTitle;
     private TextView headerTextviewSubtitle;
+    private LinearLayout linearLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        attachHome();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,9 +128,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        setTitle(item.getTitle());
+        linearLayout.setVisibility(View.GONE);
 
         if (id == R.id.nav_bhamashahPassbook) {
+
             AppUtils.addFragment(this, new BhamashahPassbookFragment());
+
 
         } else if (id == R.id.nav_bs_offers) {
             AppUtils.addFragment(this,new CurrentOffersBankFragment());
@@ -176,6 +184,48 @@ public class MainActivity extends AppCompatActivity
             Intent i=new Intent(this,ProfileActivity.class);
             startActivity(i);
         }
+    }
+
+    private void attachHome(){
+        linearLayout= (LinearLayout) findViewById(R.id.linearlayout_homeactivity);
+        Button home  = (Button) findViewById(R.id.button_homeactivity_homebanking);
+        Button awairness  = (Button) findViewById(R.id.button_homeactivity_awairness);
+        Button bankingservices  = (Button) findViewById(R.id.button_homeactivity_bankingservices);
+        Button other  = (Button) findViewById(R.id.button_homeactivity_other);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                AppUtils.addFragment(MainActivity.this, new HomeBankingFragment());
+            }
+        });
+        awairness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                AppUtils.addFragment(MainActivity.this, new AwairnessFragment());
+            }
+        });
+        bankingservices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                AppUtils.addFragment(MainActivity.this,new CurrentOffersBankFragment());
+
+            }
+        });
+        other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setVisibility(View.GONE);
+                AppUtils.addFragment(MainActivity.this, new BhamashahPassbookFragment());
+
+            }
+        });
+
+
 
     }
+
+
 }
