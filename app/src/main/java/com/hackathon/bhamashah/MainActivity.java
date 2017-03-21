@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -23,7 +24,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.hackathon.bhamashah.activities.LoginActivity;
 import com.hackathon.bhamashah.activities.ProfileActivity;
 import com.hackathon.bhamashah.bean.Login.FamilyDetailsBean;
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity
     private ImageView headerImageViewProfile;
     private TextView headerTextviewTitle;
     private TextView headerTextviewSubtitle;
+    private boolean exitOnBack = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +88,10 @@ public class MainActivity extends AppCompatActivity
             byte[] decodedString = Base64.decode(strBase64, Base64.DEFAULT);
             Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
             headerImageViewProfile.setImageBitmap(decodedByte);
-
+//            Glide.with(this)
+//                    .load(decodedByte)
+//                    .bitmapTransform(new CropCircleTransformation( MainActivity.this))
+//                    .into(headerImageViewProfile);
         }
         navigationView.setNavigationItemSelectedListener(this);
 
@@ -97,7 +105,20 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (exitOnBack) {
+                Toast.makeText(this, "Press again to Exit...",
+                        Toast.LENGTH_SHORT).show();
+                exitOnBack = false;
+                new Handler().postDelayed(new Runnable() {
+
+                    @Override
+                    public void run() {
+                        exitOnBack = true;
+                    }
+                }, 1600);
+            } else {
+                super.onBackPressed();
+            }
         }
     }
 
@@ -183,4 +204,5 @@ public class MainActivity extends AppCompatActivity
         }
 
     }
+
 }
