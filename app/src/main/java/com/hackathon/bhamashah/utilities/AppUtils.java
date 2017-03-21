@@ -6,15 +6,20 @@ import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.hackathon.bhamashah.R;
 import com.hackathon.bhamashah.base.BaseFragment;
+import com.hackathon.bhamashah.base.MyApplication;
 import com.hackathon.bhamashah.data.local.SharedPreferences;
 
 /**
@@ -106,6 +111,7 @@ public class AppUtils {
                         }
                     }
                 });
+
         if (negativeButtonText!=null) {
             builder.setNegativeButton(negativeButtonText,
                     new DialogInterface.OnClickListener() {
@@ -136,7 +142,26 @@ public class AppUtils {
         activity.runOnUiThread(runnable);
     }
 
+
+    public static void addAdatperToRecyclerView(RecyclerView.Adapter adapter,RecyclerView recyclerView) {
+//        mAdapter = new MoviesAdapter(movieList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(MyApplication.getContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(adapter);
+    }
+
     public static void logout(Context context) {
         SharedPreferences.clearAll(context);
+    }
+
+    public static void shareLink(Context context, String link) {
+        if (context != null && link != null && !link.isEmpty()) {
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, link);
+            sharingIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            context.startActivity(Intent.createChooser(sharingIntent, ""));
+        }
     }
 }

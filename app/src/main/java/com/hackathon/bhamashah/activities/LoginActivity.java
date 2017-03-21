@@ -1,5 +1,6 @@
 package com.hackathon.bhamashah.activities;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -179,6 +180,14 @@ public class LoginActivity extends AppCompatActivity{
             SharedPreferences.putBoolean(SharedPreferences.KEY_IsLOGIN,true,this);
             startActivity(new Intent(this, MainActivity.class));
             finish();
+        }else{
+            String message ="OTP mismatched" ;
+            AppUtils.showDialogWithTwoButtons(this,"Incorrect",message,"OK",null, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            },null);
         }
     }
 
