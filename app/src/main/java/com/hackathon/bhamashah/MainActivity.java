@@ -40,6 +40,7 @@ import com.hackathon.bhamashah.fragments.CurrentOffersBankFragment;
 import com.hackathon.bhamashah.fragments.HomeBankingFragment;
 import com.hackathon.bhamashah.fragments.SpecialMedicalServicesFragment;
 import com.hackathon.bhamashah.utilities.AppUtils;
+import com.hackathon.bhamashah.utilities.Constants;
 
 import java.util.List;
 
@@ -54,8 +55,42 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+//        Intent intent = getIntent();
+//        if(intent!=null){
+//            int position = intent.getIntExtra("position",0);
+//
+//            if(position==Constants.PAGE_TYPE.HOME_BANKING.ordinal()){
+//                AppUtils.addFragment(this, new HomeBankingFragment());
+//
+//            }else if(position==Constants.PAGE_TYPE.ELIGIBILITY.ordinal()){
+//                AppUtils.addFragment(this, new BankEligibilityFragment());
+//
+//            }else if(position==Constants.PAGE_TYPE.AWAIRNESS.ordinal()){
+//                AppUtils.addFragment(this, new AwairnessFragment());
+//
+//            }else if(position==Constants.PAGE_TYPE.BANKING_SERVICES.ordinal()){
+//                AppUtils.addFragment(this,new CurrentOffersBankFragment());
+//
+//            }else if(position==Constants.PAGE_TYPE.PASSBOOK.ordinal()){
+//                AppUtils.addFragment(this, new BhamashahPassbookFragment());
+//
+//            }else if(position==Constants.PAGE_TYPE.PROFILE.ordinal()){
+//                Intent i=new Intent(this,ProfileActivity.class);
+//                startActivity(i);
+//
+//            }else if(position==Constants.PAGE_TYPE.SOS.ordinal()){
+//
+//            }}
+
+
+
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +156,7 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -21,7 +21,7 @@ public class SplashActivity extends Activity {
             public void run() {
                 if (!isFinishing()){
                     if( SharedPreferences.getBoolean(SharedPreferences.KEY_IsLOGIN,false,SplashActivity.this)){
-                        Intent i=new Intent(SplashActivity.this,HomeActivity.class);
+                        Intent i=new Intent(SplashActivity.this,MainActivity.class);
                         startActivity(i);
 
                     }else{

@@ -1,7 +1,9 @@
 package com.hackathon.bhamashah.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.hackathon.bhamashah.HomeActivity;
+import com.hackathon.bhamashah.MainActivity;
+import com.hackathon.bhamashah.SplashActivity;
 import com.hackathon.bhamashah.bean.Album;
 import com.hackathon.bhamashah.R;
 
@@ -48,9 +53,19 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Album album = albumList.get(position);
         holder.title.setText(album.getName());
+        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Album album1 = albumList.get(position);
+                Log.e("erro",album1.getPage_type().toString());
+                Intent i=new Intent(mContext,MainActivity.class);
+                i.putExtra("position",album1.getPage_type().ordinal());
+                mContext.startActivity(i);
+            }
+        });
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
 

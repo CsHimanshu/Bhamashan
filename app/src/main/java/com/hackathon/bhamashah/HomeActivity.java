@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.hackathon.bhamashah.adapters.AlbumsAdapter;
 import com.hackathon.bhamashah.bean.Album;
+import com.hackathon.bhamashah.utilities.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,46 +94,33 @@ public class HomeActivity extends AppCompatActivity {
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album2,
-                R.drawable.album3,
-                R.drawable.album4,
-                R.drawable.album5,
-                R.drawable.album6,
-                R.drawable.album7,
-                R.drawable.album8,
-                R.drawable.album9,
-                R.drawable.album10,
-                R.drawable.album11};
+                R.drawable.profile,
+                R.drawable.home_backing,
+                R.drawable.backing_services,
+                R.drawable.eligibility,
+                R.drawable.awairness,
+                R.drawable.sos,
+                R.drawable.passbook};
 
-        Album a = new Album("True Romance", covers[0]);
+        Album a = new Album("Profile", covers[0], Constants.PAGE_TYPE.PROFILE);
         albumList.add(a);
 
-        a = new Album("Xscpae", covers[1]);
+         a = new Album("Home Banking Service", covers[1], Constants.PAGE_TYPE.HOME_BANKING);
         albumList.add(a);
 
-        a = new Album("Maroon 5", covers[2]);
+        a = new Album("Bank Offers and Schemes", covers[2], Constants.PAGE_TYPE.BANKING_SERVICES);
         albumList.add(a);
 
-        a = new Album("Born to Die", covers[3]);
+        a = new Album("Eligibility for Bank Services", covers[3], Constants.PAGE_TYPE.ELIGIBILITY);
         albumList.add(a);
 
-        a = new Album("Honeymoon", covers[4]);
+        a = new Album("Awareness", covers[4], Constants.PAGE_TYPE.AWAIRNESS);
         albumList.add(a);
 
-        a = new Album("I Need a Doctor", covers[5]);
+        a = new Album("SOS", covers[5], Constants.PAGE_TYPE.SOS);
         albumList.add(a);
 
-        a = new Album("Loud",  covers[6]);
-        albumList.add(a);
-
-        a = new Album("Legend", covers[7]);
-        albumList.add(a);
-
-        a = new Album("Hello", covers[8]);
-        albumList.add(a);
-
-        a = new Album("Greatest Hits", covers[9]);
+        a = new Album("Bhamashah Passbook", covers[6], Constants.PAGE_TYPE.PASSBOOK);
         albumList.add(a);
 
         adapter.notifyDataSetChanged();
