@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.hackathon.bhamashah.HomeActivity;
 import com.hackathon.bhamashah.MainActivity;
 import com.hackathon.bhamashah.R;
 import com.hackathon.bhamashah.bean.Login.FamilyDetailsBean;
@@ -178,7 +179,7 @@ public class LoginActivity extends AppCompatActivity{
         String password = mPasswordView.getText().toString();
         if(email.equalsIgnoreCase(selectedEmail) && password.equalsIgnoreCase(String.valueOf(OTP))){
             SharedPreferences.putBoolean(SharedPreferences.KEY_IsLOGIN,true,this);
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, HomeActivity.class));
             finish();
         }else{
             String message ="OTP mismatched" ;

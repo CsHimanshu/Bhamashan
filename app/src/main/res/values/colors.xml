@@ -7,4 +7,6 @@
     <color name="rowcolor">#e6e6df</color>
     <color name="subtitle">#999999</color>
     <color name="title">#222222</color>
+    <color name="album_title">#4c4c4c</color>
+    <color name="viewBg">#f1f5f8</color>
 </resources>

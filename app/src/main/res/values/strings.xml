@@ -20,6 +20,9 @@
     <string name="logout">Logout</string>
     <string name="share">Share</string>
 
+    <string name="backdrop_title">Bhamashah yojan</string>
+    <string name="backdrop_subtitle">Initiative of Rajashthan government</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="banking_offers_and_service">Banking offers and Service</string>

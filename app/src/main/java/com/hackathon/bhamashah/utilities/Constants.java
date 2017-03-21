@@ -8,4 +8,5 @@ public class Constants {
 
     public static final String BASE_URL="http://ttnstore.com/Hackathon/";
     public static final String BFamilyID = "WDYYYGG";
+    public enum PAGE_TYPE {PROFILE,CURRENT_B}
 }
