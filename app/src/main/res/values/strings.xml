@@ -45,5 +45,6 @@
     <string name="error_field_required">This field is required</string>
     <string name="normal_delivery_text">It will be delivered within 2-3 working days</string>
     <string name="request_amt_error">Enter request amount</string>
+    <string name="no_records">No records</string>
 
 </resources>

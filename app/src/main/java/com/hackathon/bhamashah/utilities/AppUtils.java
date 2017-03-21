@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -152,5 +153,15 @@ public class AppUtils {
 
     public static void logout(Context context) {
         SharedPreferences.clearAll(context);
+    }
+
+    public static void shareLink(Context context, String link) {
+        if (context != null && link != null && !link.isEmpty()) {
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, link);
+            sharingIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            context.startActivity(Intent.createChooser(sharingIntent, ""));
+        }
     }
 }

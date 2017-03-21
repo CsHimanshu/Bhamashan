@@ -73,7 +73,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:padding="10dp"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
@@ -103,7 +103,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
@@ -131,7 +131,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
@@ -161,7 +161,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -187,7 +187,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -207,6 +207,8 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
     </LinearLayout>
 
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -214,7 +216,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -229,7 +231,6 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
             android:id="@+id/category"
             android:gravity="left"
             android:textStyle="bold"
-            android:background="#faebd7"
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -242,7 +243,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -268,7 +269,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -295,7 +296,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"
@@ -320,7 +321,7 @@ android:paddingTop="@dimen/activity_vertical_margin" tools:context="com.hackatho
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
-        android:background="#faebd7"
+        android:background="@color/rowcolor"
         android:layout_height="wrap_content">
         <TextView
             android:layout_width="0dp"

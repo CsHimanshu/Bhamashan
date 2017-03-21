@@ -3,6 +3,7 @@ package com.hackathon.bhamashah.data.remote;
 
 import com.hackathon.bhamashah.bean.ApplyBankServiceApiResponse;
 import com.hackathon.bhamashah.bean.CurrentOffersApiResponse;
+import com.hackathon.bhamashah.bean.GeneralAwairnessApiResponse;
 import com.hackathon.bhamashah.bean.LoanEligibilityApiResponse;
 import com.hackathon.bhamashah.bean.AllServicesApiResponse;
 import com.hackathon.bhamashah.bean.CheckAmoutApiResponse;
@@ -86,5 +87,14 @@ public interface ApiInterface {
             @Query("operation") String operation,
             @Query("bhamashahId") String BID
     );
+
+
+    @Headers("Cache-Control: no-cache")
+    @GET("services.php")
+    Call<GeneralAwairnessApiResponse> getgeneralAwairnessAPIResponse(
+            @Query("operation") String operation,
+            @Query("rationCardId") String rationCardId
+    );
+
 
 }
