@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:padding="5dp"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requested Amout : "/>
+
+
+        <TextView
+            android:id="@+id/homebankitem_amount"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:text="fdffd"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request Status : "/>
+
+
+        <TextView
+            android:id="@+id/homebankitem_status"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:text="fdffd"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Initiated On : "/>
+
+
+        <TextView
+            android:id="@+id/homebankitem_init"
+            android:textColor="@color/title"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content"
+            android:text="fdffd"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/subtitle"/>
+
+</LinearLayout>
